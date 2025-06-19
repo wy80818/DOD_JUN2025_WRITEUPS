@@ -10,10 +10,10 @@
 
 With websites, you can move to different pages by altering the URL. As long as the destination exists and the user has permission, they can view it. In this case, the default URL of this page is `https://juche.msoidentity.com`. So if we add '`/robots.txt`' to the end of the link, we can view the `robots.txt` text file through our browser like so:
 
-![Screenshot of the website's main page.](redirect_1.png)
+![Screenshot of the website's robots.txt page.](redirect_1.png)
 
 From this page, we can also see that `/juchejaguar/` exists as well. so replacing `/robots.txt` with `juchejaguar` will give us another page:
 
-![Screenshot of the website's main page.](redirect_2.png)
+![Screenshot of the website's juchejaguar page.](redirect_2.png)
 
 From here, we can visibly see the correct flag: `C1{r0b0ts_arent_4lways_p0lit3}`
