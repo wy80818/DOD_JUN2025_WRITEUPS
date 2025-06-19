@@ -1,4 +1,4 @@
-# Encoded Evidence - 75 Points
+# Inspo - 200 Points
 
 **Description:** We believe that the North Torbians are heavily influenced by North Korean developments and wish to match them. We have suspicions that Juche Jaguar will try to build out similar spaces to ones in these pictures. Can you find the coordinates of where these pictures were taken?
 
