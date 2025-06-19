@@ -1,6 +1,6 @@
 # Secret.txt Society - 75 Points
 
-**Description:** our team suspects that a Juche Jaguar developer accidentally left somethign interesting behind on a public site. You've been tasked with examining its structure. Can you uncover what the bots were told to ignore? Start with the usual entry points a crawler might explore. One disalloweed path leads to a page where someone left behind more than just code.
+**Description:** Our team suspects that a Juche Jaguar developer accidentally left somethign interesting behind on a public site. You've been tasked with examining its structure. Can you uncover what the bots were told to ignore? Start with the usual entry points a crawler might explore. One disalloweed path leads to a page where someone left behind more than just code.
 
 **Supplementary Materials:** A URL to the website.
 
