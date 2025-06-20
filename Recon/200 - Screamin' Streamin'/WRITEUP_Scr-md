@@ -1,0 +1,36 @@
+# Screamin' Streamin' - 200 Points
+
+**Description:** We've received intel that Juche Jaguar has exposed a network stream on the host 34.85.185.78 between TCP ports 5000 and 10000. Once you find the port, connect to the correct stream name and report back with a flag.
+
+**Supplementary Materials:** None, just the IP address in the description.
+
+**Solution:** Firstly, to find the correct port, we can use the linux command `nmap` to search through the exisitng ports within an IP address:
+
+![finding the port](nmap.png)
+
+Here we can see there is only one port open, which is 8774.
+
+Given that we need to find the correct stream name within an IP address, it will be using RTSP (Real-Time Streaming Protocol), which gives the ability to stream video/audio between a server and a client. There is no easy way to output a list of existing stream names, so the best we can do is to just test common stream names until we get a response. For this case, we can use a python script to test possible stream names until we get a successful response.
+
+![AI-gen script](script.png)
+
+This is an AI generated script that tests a variety of keywords along with numbers using the subprocess python package. I also used VLC as a medium to view the media as indicated by 23. What's important in this script is:
+1. To have a list of commond keywords
+2. Numbers to test combinations (this ended up not being necessary)
+3. subprocess to test opening possible stream URLS
+4. string matching to confirm if the URL has at least existed (VERY IMPORTANT)
+
+Running this immediately confirms an existing URL:
+
+![Running script](found.png)
+
+However, an error is raised when we try to open it:
+
+![Error](err.png)
+
+This is most likely a compatibility/timing issue between VLC and the stream. Instead, let's try using ffplay:
+(Specifically this command: `ffplay -rtsp_transport tcp -fflags +genpts rtsp://34.85.185.78/8774/stream`)
+
+![AI-gen flag](flag.png)
+
+Once it finishes, an AI-generated gif appears which reveals the correct flag: `C1{RTSP_you_found_me}`
